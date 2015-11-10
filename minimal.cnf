@@ -1,9 +1,10 @@
 [mysqld]
 # /etc/my.cnf:
+innodb_file_per_table=1
 innodb_buffer_pool_size=5M
 innodb_log_buffer_size=256K
 query_cache_size=0
-max_connections=10
+#max_connections=10
 key_buffer_size=8
 thread_cache_size=0
 host_cache_size=0
@@ -25,3 +26,6 @@ innodb_sort_buffer_size=64K
 #settings that relate to the binary log (if enabled)
 binlog_cache_size=4K
 binlog_stmt_cache_size=4K
+
+#largest impact (50% memory)
+performance_schema=off
