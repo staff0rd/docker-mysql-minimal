@@ -1,6 +1,6 @@
 FROM mysql:5.7.9
 
-ADD minimal.cnf /etc/mysql/conf.d/minimal.cnf
+COPY minimal.cnf /etc/mysql/conf.d/
 
 ENTRYPOINT ["/entrypoint.sh"]
 
